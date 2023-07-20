@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 1.16.0
 dependencies:
 - name: common
-  repository: https://amitbansal26.github.io/sunbird-helm-chart
+  repository: file://../common/
   version: 0.1.0
 description: A Helm chart for lern-flink-jobs
 name: lern-flink-jobs
