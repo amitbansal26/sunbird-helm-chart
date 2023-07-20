@@ -11,6 +11,56 @@ entries:
     urls:
     - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/common-0.1.0/common-0.1.0.tgz
     version: 0.1.0
+  elasticsearch-init:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-07-20T04:05:18.347106709Z"
+    description: A Helm chart for Kubernetes
+    digest: 7836aca28154b98e58995157ed62a9bb059f86894d16e31721dbe9adacd44de7
+    name: elasticsearch-init
+    type: application
+    urls:
+    - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/elasticsearch-init-0.1.0/elasticsearch-init-0.1.0.tgz
+    version: 0.1.0
+  kafka:
+  - annotations:
+      category: Infrastructure
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.4.0
+    created: "2023-07-20T04:05:18.497810024Z"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Kafka is a distributed streaming platform designed to build
+      real-time pipelines and can be used as a message broker or as a replacement
+      for a log aggregation solution for big data applications.
+    digest: db0ae77661b8d6e688ad9aab1754a420d82fc164d0eac67a3db3522a415e9bd0
+    home: https://github.com/bitnami/charts/tree/main/bitnami/kafka
+    icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+    keywords:
+    - kafka
+    - zookeeper
+    - streaming
+    - producer
+    - consumer
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: kafka
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/kafka
+    - https://kafka.apache.org/
+    urls:
+    - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/kafka-21.3.1/kafka-21.3.1.tgz
+    version: 21.3.1
   lern-flink-jobs:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -26,4 +76,40 @@ entries:
     urls:
     - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/lern-flink-jobs-0.1.0/lern-flink-jobs-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-20T01:52:13.803301762Z"
+  postgresql:
+  - annotations:
+      category: Database
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 15.2.0
+    created: "2023-07-20T04:05:18.631931632Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: 22698a7887ead121ab0d304c9fb8eea1dedd43bf080545d833e31209c2ec5c22
+    home: https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+    - https://www.postgresql.org/
+    urls:
+    - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/postgresql-12.2.2/postgresql-12.2.2.tgz
+    version: 12.2.2
+generated: "2023-07-20T04:05:18.631945033Z"
