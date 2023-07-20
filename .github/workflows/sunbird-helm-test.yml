@@ -38,4 +38,4 @@ jobs:
         if: ${{ needs.list-changed.outputs.changed }} == 'true'
 
       - name: Run chart-testing (install)
-        run: ct install --config sunbird-helm-test.yaml
+        run: ct install --config ct.yaml
