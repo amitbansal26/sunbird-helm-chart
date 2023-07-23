@@ -28,6 +28,44 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.4.0
+    created: "2023-07-23T11:26:19.012882071Z"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 11.x.x
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Kafka is a distributed streaming platform designed to build
+      real-time pipelines and can be used as a message broker or as a replacement
+      for a log aggregation solution for big data applications.
+    digest: deb7cc4e697441d92413ab5cb70beed7c4a9dc210d9a13ea83f7b873d0977bb2
+    home: https://github.com/bitnami/charts/tree/main/bitnami/kafka
+    icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+    keywords:
+    - kafka
+    - zookeeper
+    - streaming
+    - producer
+    - consumer
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: kafka
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/kafka
+    - https://kafka.apache.org/
+    urls:
+    - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/kafka-21.3.2/kafka-21.3.2.tgz
+    version: 21.3.2
+  - annotations:
+      category: Infrastructure
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.4.0
     created: "2023-07-20T04:05:18.497810024Z"
     dependencies:
     - condition: zookeeper.enabled
@@ -112,4 +150,4 @@ entries:
     urls:
     - https://github.com/amitbansal26/sunbird-helm-chart/releases/download/postgresql-12.2.2/postgresql-12.2.2.tgz
     version: 12.2.2
-generated: "2023-07-20T04:05:18.631945033Z"
+generated: "2023-07-23T11:26:19.167331931Z"
